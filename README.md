@@ -1,44 +1,25 @@
-# python-getting-started
+# Pagina Web para el Arriendo de Globos
 
-A barebones Python app, which can easily be deployed to Heroku.
+Esta aplicacion se realizo segun las instruciones del curso de Desarrollo de Web, de la universidad andres bello. Esta subida a Github [Trabajo Final](https://github.com/Cheloss/TrabajoFinal/)
 
-This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
+## Problematica y Requerimientos
 
-## Running Locally
+Juan Carlos Nuñez, hermano del Alumno Marcelo Nuñez, le solicito crear una página web con el motivo de emprender con un negocio de arriendo de Juegos Inflables en la cual se pudieran visualizar los productos que se arriendan y que le permitiera subir nuevos productos, modificarlos o eliminarlos en el futuro
 
-Make sure you have Python [installed properly](http://install.python-guide.org).  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
+## Ejecución local
 
-```sh
-$ git clone git@github.com:heroku/python-getting-started.git
-$ cd python-getting-started
+El index del proyecto de ejecuta la la ruta local por ejemplo [Localhost](127.0.0.1:8080), para instalar los requemientos puede usar el siguiente comando
 
+```
 $ pip install -r requirements.txt
-
-$ createdb python_getting_started
-
+$ python manage.py makemigrations
 $ python manage.py migrate
-$ python manage.py collectstatic
-
-$ heroku local
+$ python manage.py runserver 0.0.0.0:8080
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-
-$ heroku run python manage.py migrate
-$ heroku open
+Para la creacion, edicion, eliminacion de Juegos Inflables hay que acceder mediante el usuario administrado en la siguiente ruta [Localhost/admin](http://127.0.0.1:8080/admin/). El usuario y contraseña son.
 ```
-or
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Python on Heroku, see these Dev Center articles:
-
-- [Python on Heroku](https://devcenter.heroku.com/categories/python)
+User: Chelo
+Pass: alaloepa2042
+```
+Las visualizacion de los juegos se puede ver accediendo click en el menu juegos o en el siguiente enlace [Juegos](http://127.0.0.1:8080/juegos/list/)
